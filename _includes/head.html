@@ -16,6 +16,14 @@
 
   <link rel="icon" href="{{ site.baseurl }}public/favicon.png"> 
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}public/js/tipped.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      Tipped.create('.x-small-tooltip', { size: 'x-small' });
+    });
+  </script>
+
   <!-- CSS -->
   <link href="//fonts.googleapis.com/" rel="dns-prefetch">
   <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&subset=latin,latin-ext" rel="stylesheet">
@@ -23,6 +31,7 @@
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/tipped.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <!-- RSS -->
