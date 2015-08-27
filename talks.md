@@ -8,6 +8,12 @@ Below you'll find a list of talks I have given at meetups and conferences. If yo
 
 ---
 
+### Roll your own micro framework
+
+September 7, 2015 *(Upcoming)* @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/)
+
+Are micro frameworks the future? When you choose a framework your often have to make compromises and you couple your code to the framework itself. Let's explore how we can create our own micro framework we can tailor for our application's needs and how it fits well in a service oriented architecture.
+
 ### Deploying PHP Applications
 
 November 14, 2014 @ [Symfony November Camp](http://www.symfony.se/november-camp/) | [feedback](https://joind.in/12540), [slides](http://www.slideshare.net/niklasmodess/deploying-php-applications-41590200)
