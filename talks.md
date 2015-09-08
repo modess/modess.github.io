@@ -10,9 +10,12 @@ Below you'll find a list of talks I have given at meetups and conferences. If yo
 
 ### Roll your own micro framework
 
-September 7, 2015 *(Upcoming)* @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/)
+September 7, 2015 @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/) | [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
 
 Are micro frameworks the future? When you choose a framework your often have to make compromises and you couple your code to the framework itself. Let's explore how we can create our own micro framework we can tailor for our application's needs and how it fits well in a service oriented architecture.
+
+<blockquote class="twitter-tweet" width="50%" lang="en"><p lang="en" dir="ltr">. <a href="https://twitter.com/niklasmodess">@niklasmodess</a> is going all technical on us about building a micro service <a href="https://twitter.com/hashtag/phpse?src=hash">#phpse</a> <a href="https://twitter.com/hashtag/sthlmtech?src=hash">#sthlmtech</a> <a href="http://t.co/UArKzPJnyK">pic.twitter.com/UArKzPJnyK</a></p>&mdash; Tobias Nyholm (@TobiasNyholm) <a href="https://twitter.com/TobiasNyholm/status/640947023554945025">September 7, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Deploying PHP Applications
 
