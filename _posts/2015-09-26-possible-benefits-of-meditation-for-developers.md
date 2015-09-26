@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Every developer should meditate
+title: Possible benefits of meditation for developers
+redirect_from: "/2015/09/26/every-developer-should-meditate/"
 ---
 
-Programming is hard work where you solve problems and try to manage complexity. Can you honestly say that you take measures for keeping your mind fresh? Keeping your body active through exercise is a great benefit for your mind, but I would like to talk about an exercise for your mind with benefits for your body also. This is of course not just for developers, but this is a blog aimed at developers. We live in a stressful world where our mind is bombarded with impressions that our mind is terrible at dealing with, so we need a tool to help our mind cope with this. The great part is that it will benefit your life in general and not just your work as a developer.
+Programming is hard work where you solve problems and try to manage complexity. Can you honestly say that you take measures for keeping your mind fresh? Keeping your body active through exercise is a great benefit for your mind, but I would like to talk about an exercise for your mind with benefits for your body also. This is of course not just for developers, but this is a blog aimed at developers. We live in a stressful world where our mind is bombarded with impressions that our mind is usually terrible at dealing with, so we need a tool to help our mind cope with this. The great part is that it will benefit your life in general and not just your work as a developer.
 
 <!-- more -->
 
