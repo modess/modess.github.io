@@ -8,6 +8,15 @@ Below you'll find a list of talks I have given at meetups and conferences. If yo
 
 ---
 
+### Deploying Symfony applications with Capifony  
+
+November 23, 2015 @ [Symfony NYC](http://www.meetup.com/Symfony-NYC/events/226057010/)
+
+It should not be difficult, scary or time consuming to deploy your application. The key is automation and covering the important steps in your deploy process. This talk will be on general aspects of deployment and show how we can create a good and automated deploy process for Symfony applications using Capifony.
+
+
+---
+
 ### Roll your own micro framework
 
 September 7, 2015 @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/) | [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
