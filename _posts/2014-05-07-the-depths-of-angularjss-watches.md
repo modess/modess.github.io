@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The depths of AngularJS's watches
+redirect_from: 
+  - /2014/05/07/the-depths-of-angularjss-watches/
 ---
 
 When you want to watch for changes in AngularJS, it is fairly kind to you by default. The kindness comes from trying to optimize performance for you. This is because each watch expressions will run at least once during each [$digest](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest) loop. I'll not go into when the $digest loop executes and why, and I'll also use watches in controllers in my examples which you should never do, but that's a [whole other discussion](http://www.benlesh.com/2013/10/title.html).

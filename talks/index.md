@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Talks
-icon: fa-bullhorn
 ---
 
 Below you'll find a list of talks I have given at meetups and conferences. If you would like me to give a presentation at your meetup or conference, hit me up with an [e-mail](mailto:niklas@modess.io).

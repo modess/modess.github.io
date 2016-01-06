@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Custom pagination in Laravel 4
+redirect_from: 
+  - /2013/11/06/custom-pagination-in-laravel-4/
 ---
 
 The default Laravel pagination is built for Twitter Bootstrap 2.0 and I believe that it will be updated to use Twitter Bootstrap 3.0 in Laravel 4.1 (not sure though). So what happens when you want to use the pagination but have to customize it to your needs? It's actually really simple since Laravel allows you to specify your own pagination view where you can access the pagination object.

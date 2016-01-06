@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Laravel vs Symfony2
+redirect_from: 
+  - /2014/04/18/laravel-vs-symfony2/
 ---
 
 This is a question that frequently arises. Someone will ask me *"Oh, you [work with/prefer/love] Laravel?"* and my answer to that is a simple yes. What baffles me is the very frequent follow up question to that, which is *"Well, what about Symfony2?"*. Every time I get this question, I'm stricken by it because I have never understood the question.

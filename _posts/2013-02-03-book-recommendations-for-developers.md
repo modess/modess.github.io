@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Book recommendations for developers
+redirect_from: 
+  - /2013/02/03/book-recommendations-for-developers/
 ---
 
 > *This post was last updated 2015-08-15*

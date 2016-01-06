@@ -1,6 +1,8 @@
 ---
 layout: post
 title: ngrok, a versatile tool for web developers
+redirect_from: 
+  - /2015/07/05/ngrok-a-versatile-tool-for-web-developers/
 ---
 
 In most cases your development machine will be local only, sitting behind a NAT or a firewall. So what happens when you need to show your progress externally or on a mobile device, or when you have to test a web hook from an external provider? This is possible, and a very simple task using **ngrok**. It's [completely open source](https://github.com/inconshreveable/ngrok), created by Alan Shreve ([@inconshreveable](https://twitter.com/inconshreveable)) and it's free! Some premium features you have to pay for, but for the most part you can use it in all its glory for no expense. It describes itself as:

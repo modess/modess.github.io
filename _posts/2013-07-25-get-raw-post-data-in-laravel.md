@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Get raw POST data in Laravel
+redirect_from: 
+  - /2013/07/25/get-raw-post-data-in-laravel/
 ---
 
 I recently stumbled upon an interesting problem when trying to retrieve the raw POST body in Laravel. This happened when I was sending POST/PUT requests from AngularJS to a REST API that was built with Laravel. I did a lot of trial and error before I figured out the problem.

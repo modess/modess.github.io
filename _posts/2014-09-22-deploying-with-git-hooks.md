@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Deploying with Git hooks
+redirect_from: 
+  - /2014/09/22/deploying-with-git-hooks/
 ---
 
 Using Git hooks to deploy your application is one of the most simple and most useful tool there is. Seriously, use them. Of course you need to use Git as your version control system, but hopefully you are already using it. You can achieve pretty much anything with your deploys with a simple setup. 

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: So I spoke at a conference
+redirect_from: 
+  - /2014/11/15/so-i-spoke-at-a-conference/
 ---
 
 A while back I saw the announcement of a PHP conference that would take place here in Stockholm where I live. I was very excited since it's the only conference I've heard of focused only on PHP here in Sweden. Actually it's focused on Symfony, but the components are such a major part of PHP nowadays. And then I came around thinking that perhaps I could contribute something to this conference. I had previously only given presentations at meetups and really enjoyed doing that. And since I'm writing a book on deploying PHP applications, I thought it would be great to at least try to get a talk accepted for that topic. So I submitted my talk proposal with the title "Deploying PHP applications" to [Symfony November Camp](http://www.symfony.se/november-camp/), and waited.

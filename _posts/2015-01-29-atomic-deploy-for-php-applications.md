@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Atomic deploy for PHP applications
+redirect_from: 
+  - /2015/01/29/atomic-deploy-for-php-applications/
 ---
 
 Once your application reaches a critical mass of users, you want to be able to deploy without any abruptions in the service. Users could be really frustrated if they work on something and suddenly when they try to save they get a message saying the service is currently unavailable and their work is nowhere to be found. It's a horrendous user experience. Striving for your deployment to be as fast and responsive as possible just won't cut it. We need to make them atomic. 

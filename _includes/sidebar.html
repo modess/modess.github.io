@@ -13,15 +13,7 @@
 
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item x-small-tooltip{% if page.url == site.baseurl %} active{% endif %}" title="Blog" href="{{ site.baseurl }}"><i class="fa fa-home"></i></a>
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item x-small-tooltip{% if page.url == node.url %} active{% endif %}" title="{{ node.title }}" href="{{ node.url }}"><i class="fa {{ node.icon }}"></i></a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
+      <a class="sidebar-nav-item x-small-tooltip{% if page.url == 'talks' %} active{% endif %}" title="Talks" href="{{ site.baseurl }}talks"><i class="fa fa-bullhorn"></i></a>
       <a class="sidebar-nav-item x-small-tooltip" title="E-mail" href="mailto:niklas@modess.io"><i class="fa fa-envelope"></i></a>
       <a class="sidebar-nav-item x-small-tooltip" title="Twitter" href="https://twitter.com/niklasmodess"><i class="fa fa-twitter"></i></a>
       <a class="sidebar-nav-item x-small-tooltip" title="Github" href="https://github.com/modess"><i class="fa fa-github"></i></a>

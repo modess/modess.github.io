@@ -1,6 +1,8 @@
 ---
 layout: post
 title: One year of working remote
+redirect_from: 
+  - /2015/08/16/one-year-of-working-remote/
 ---
 
 Yet another post on summing up the first year of working remote. But I hope it can inspire someone out there, or give someone some clue to what it's like and where the great parts are and possible hidden pitfalls. I'm not saying it's for everyone since I know plenty of people who like the idea of having a clear distinction between work and home. But for me it works and I probably never want to go back.

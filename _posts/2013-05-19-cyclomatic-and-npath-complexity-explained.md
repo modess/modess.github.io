@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Cyclomatic and NPath complexity explained
+redirect_from: 
+  - /2013/05/19/cyclomatic-and-npath-complexity-explained/
 ---
 
 If you happen to be using [PHP Mess Detector][1] (which you should for any larger project) you have probably stumbled upon these two, but do you really know what they stand for? They sound really scary, but they're basically fancy words for quite simple concepts. So let's go through them and also find out why they're important for maintainable and testable code. Both of these concepts are used in static code analysis and are measurements of how complex a function is.
