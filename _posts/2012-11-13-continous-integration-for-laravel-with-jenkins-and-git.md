@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Continuos integration for Laravel with Jenkins and Git
+title: PHP Continuos integration for Laravel with Jenkins and Git
 redirect_from: 
   - /2012/11/13/continous-integration-for-laravel-with-jenkins-and-git/
 ---
 
-This will be a hands on guide for setting up automated builds for [Laravel](http://www.laravel.com) using [Jenkins](http://www.jenkins-ci.org). Pretty much that when you do a commit, Jenkins will automagically make a build and in that check code errors and syntax, run unit tests and provide visual code coverage for your code base. Along with other goodies.
+This will be a hands on guide for setting up automated builds for a [Laravel](http://www.laravel.com) application using [Jenkins](http://www.jenkins-ci.org). Pretty much that when you do a commit, Jenkins will automagically make a build and in that check code errors and syntax, run unit tests and provide visual code coverage for your code base. Achieve continous integration for PHP, along with other goodies.
 
 <!-- more -->
 
@@ -125,3 +125,5 @@ git commit -m "Test autobuild in Jenkins"
 ![](/public/img/jenkins-build.png)
 
 After your commit you should see this in Jenkins, and the build should pass. Since Laravel ships with an example test (that just asserts true is true) you should have one passed test as well.
+
+Congratulations, you have learned PHP continous integration for a Laravel application leveraging Jenkins and Git!
