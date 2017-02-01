@@ -3,19 +3,20 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
+permalink:           "/:title/"
 relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+title:       'modess.io'
+tagline:     ''
+description: >
+  My name is Niklas Modess, I'm a PHP developer and consultant from Stockholm, Sweden. Author of <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a>
+url:         https://modess.io
+baseurl:     /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Niklas Modess'
+  url:            https://twitter.com/niklasmodess
 
 paginate:         5
 
@@ -24,3 +25,7 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/poole/hyde
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
