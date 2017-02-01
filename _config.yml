@@ -10,7 +10,9 @@ relative_permalinks: true
 title:       'modess.io'
 tagline:     ''
 description: >
-  My name is Niklas Modess, I'm a PHP developer and consultant from Stockholm, Sweden. Author of <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a>
+  My name is Niklas Modess. I'm a PHP developer and consultant from Stockholm, Sweden.
+  I write mostly on deployment, Laravel and PHP in general.
+  Author of <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a> and I occasionally talk at meetups or conferences.
 url:         https://modess.io
 baseurl:     /
 
