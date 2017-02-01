@@ -15,8 +15,10 @@ url:         https://modess.io
 baseurl:     /
 
 author:
-  name:           'Niklas Modess'
-  url:            https://twitter.com/niklasmodess
+  name:   'Niklas Modess'
+  email:   niklas@modess.io
+  twitter: niklasmodess
+  github:  https://github.com/modess
 
 paginate:         5
 
