@@ -1,25 +1,24 @@
 ---
 layout: post
 title: ngrok, a versatile tool for web developers
-redirect_from: 
-  - /2015/07/05/ngrok-a-versatile-tool-for-web-developers/
+permalink: /ngrok-versatile-tool-web-developers/
 ---
 
-In most cases your development machine will be local only, sitting behind a NAT or a firewall. So what happens when you need to show your progress externally or on a mobile device, or when you have to test a web hook from an external provider? This is possible, and a very simple task using **ngrok**. It's [completely open source](https://github.com/inconshreveable/ngrok), created by Alan Shreve ([@inconshreveable](https://twitter.com/inconshreveable)) and it's free! Some premium features you have to pay for, but for the most part you can use it in all its glory for no expense. It describes itself as:
+In most cases your development machine will be local only, sitting behind a NAT or a firewall. So what happens when you need to show your progress externally or on a mobile device, or when you have to test a web hook from an external provider? This is possible, and a very simple task using **ngrok**. It’s [completely open source](https://github.com/inconshreveable/ngrok), created by Alan Shreve ([@inconshreveable](https://twitter.com/inconshreveable)) and it’s free! Some premium features you have to pay for, but for the most part you can use it in all its glory for no expense. It describes itself as:
 
 > ngrok is a reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.
 
-<!-- more --> 
+<!-- more -->
 
 What this translates to is that you run ngrok on your development machine, a subdomain on ngrok.com is created such as `somerandomdomain.ngrok.com` that will act as a reverse proxy to your development machine. That way any request to the subdomain will be proxied to your development machine, and on top of that you can analyze the requests and even replay them.
 
-Using a push queue provider or a provider for websockets that you want to try or test? Then you can easily set up a reverse proxy, add that url in the provider and have it make the requests there so they get proxied to your development machine and you can test things out. 
+Using a push queue provider or a provider for websockets that you want to try or test? Then you can easily set up a reverse proxy, add that url in the provider and have it make the requests there so they get proxied to your development machine and you can test things out.
 
 To install it, take a look at their [download page](https://ngrok.com/download).
 
 ## Setting up a simple tunnel
 
-Once you have it installed, you can run the command `ngrok 80` in a terminal and you've started a reverse proxy to your machine. It will look something like this:
+Once you have it installed, you can run the command `ngrok 80` in a terminal and you’ve started a reverse proxy to your machine. It will look something like this:
 
 ```
 ngrok
@@ -45,7 +44,7 @@ To set up a tunnel to your Vagrant machine, you could either install it inside t
 
 ## Ngrok configuration file
 
-If you do not feel like getting a random subdomain each time you run ngrok, you can register on [ngrok.com](http://www.ngrok.com) to get an auth token. Using that, you can add it to the ngrok configuration file and add as many tunnels you'd like with custom subdomains as long as no one else is using them. You can find where the default location for your configuration file based on your environment [here](https://ngrok.com/docs#default-config-location).
+If you do not feel like getting a random subdomain each time you run ngrok, you can register on [ngrok.com](https://ngrok.com/) to get an auth token. Using that, you can add it to the ngrok configuration file and add as many tunnels you’d like with custom subdomains as long as no one else is using them. You can find where the default location for your configuration file based on your environment [here](https://ngrok.com/docs#default-config-location).
 
 So now we can set up the auth token in configuration file:
 
@@ -53,7 +52,7 @@ So now we can set up the auth token in configuration file:
 auth_token: "r4nd0m5tr1ng"
 {% endhighlight %}
 
-After this we can specify our tunnels, let's call it `vagrant` and points to our Vagrant machine.
+After this we can specify our tunnels, let’s call it `vagrant` and points to our Vagrant machine.
 
 {% highlight yaml %}
 tunnels:
@@ -76,4 +75,4 @@ Web Interface                 127.0.0.1:4040
 Avg Conn Time                 0.00ms
 ```
 
-Which tells us we have a "permanent" subdomain on ngrok.com everytime we run it!
+Which tells us we have a “permanent” subdomain on ngrok.com everytime we run it!
