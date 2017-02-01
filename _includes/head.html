@@ -27,4 +27,10 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  {% if page.title == "Home" %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  {% else %}
+  <link rel="canonical" href="{{ site.url }}" />
+  {% endif %}
 </head>
