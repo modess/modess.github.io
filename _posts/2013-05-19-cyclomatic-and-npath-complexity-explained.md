@@ -15,7 +15,7 @@ This is a very straight forward concept, it's pretty well [documented](http://ph
 
 It will begin by adding 1 point for the function declaration, after that it will add 1 point for every `if`, `while`, `for` and `case`. I'll just copy and paste the example code from PHPMD's documentation to illustrate this, of how this function ends up with a cyclomatic complexity of 12.
 
-```php
+{% highlight php %}
 <?php
 class Foo
 {
@@ -54,7 +54,7 @@ class Foo
         }
     }
 }
-```
+{% endhighlight %}
 
 Not that hard, huh?
 
@@ -66,7 +66,7 @@ Now this one is a bit trickier since the PHPMD [documentation](http://phpmd.org/
 
 Wait, what? At least to me that made zero sense when I first read it. But as previously stated, it's just a lot of fancy talk for simple stuff. The simple explanation is that how many "paths" there are in the flow of your code in the function. Let's write ut a simple example function.
 
-```php
+{% highlight php %}
 <?php
 function foo($a, $b)
 {
@@ -86,7 +86,7 @@ foo(1, 2); // Outputs 24
 foo(11, 1); // Outputs 13
 foo(11, 20); // Outputs 14
 foo(5, 1); // Outputs 23
-```
+{% endhighlight %}
 
 So here we have function with 4 possible outcomes, since we have 2 statements that have 2 possible outcomes each (`2 * 2 = 4`). That means that the functions Npath complexity is 4. If we would add another statement with 2 possible outcomes we would get a complexity of 8 since `2 * 2 * 2 = 8`.
 

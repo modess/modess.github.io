@@ -29,17 +29,17 @@ One of the best features about Git hooks is that they don’t care what language
 
 Like Bash? Not a problem.
 
-```bash
+{% highlight bash %}
 #!/bin/bash
 echo "Hello World!"
-```
+{% endhighlight %}
 
 Prefer Python? Sure.
 
-```python
+{% highlight python %}
 #!/usr/local/bin/python
 print "Hello world"
-```
+{% endhighlight %}
 
 I’ll stick to Bash in my examples, since then we don’t have to worry about a specific language being installed on the system.
 
@@ -47,11 +47,11 @@ I’ll stick to Bash in my examples, since then we don’t have to worry about a
 
 Fire up a terminal and log in remotely to your server. We’ll start off setting up an empty repository in `/var/www/app.git`.
 
-```
+~~~
 mkdir -p /var/www/app.git
 cd /var/www/app.git
 git init
-```
+~~~
 
 This is all we need to do on the remote for now. Of course you need to set up your web server to serve that folder for some domain. If you’re reading this I’ll assume that you are proficient in configuring your web server.
 
@@ -59,26 +59,26 @@ This is all we need to do on the remote for now. Of course you need to set up yo
 
 Once more fire up the terminal if you don’t have it open. Let’s create our local repository. You can skip this step if you already have your repository ready.
 
-```
+~~~
 mkdir -p ~/dev/app
 cd ~/dev/app
 git init
-```
+~~~
 
 Now you have a local repository. We need to connect that to the server, so we want to add a remote pointing to it.
 
-```
+~~~
 git remote add production user@host:/var/www/app.git/
-```
+~~~
 
 You have now successfully created a set up where you can push from your local environment straight to your server! Let’s try it and see that it works.
 
-```
+~~~
 echo "<?php\necho 'Hello world';" > index.php
 git add .
 git commit -m "Initial commit"
 git push production master
-```
+~~~
 
 Did it work? Sweet. If you have your web server set up properly, you should be able to go to the domain and see “Hello world”.
 
@@ -90,21 +90,21 @@ This hook will be triggered on the remote when you have pushed to it and all the
 
 Remotely login to your server and run these commands to create an empty hook.
 
-```
+~~~
 cd /var/www/app.git
 touch .git/hooks/post-receive
 chmod +x .git/hooks/post-receive
-```
+~~~
 
 Now let’s fill that hook with the following stuff:
 
-```bash
+{% highlight bash %}
 #!/bin/bash
 cd ..
 unset GIT_DIR
 env -i git reset --hard
 git checkout -f
-```
+{% endhighlight %}
 
 The commands are pretty much boilerplate and you don’t have to worry so much about them. It does a hard reset of your repository and then forces a checkout of the latest ref. Without these you would have to manually move the HEAD pointer on your remote.
 
@@ -112,26 +112,26 @@ The commands are pretty much boilerplate and you don’t have to worry so much a
 
 Now this is where it gets interesting. In the git post-update hook is where you can run all the commands you need. First we create the hook.
 
-```
+~~~
 cd /var/www/app.git
 touch .git/hooks/post-update
 chmod +x .git/hooks/post-update
-```
+~~~
 
 We start off by moving ourself into the root of our repository, since hooks working directory are `.git`. Just as we did in the _post-receive_ hook.
 
-```bash
+{% highlight bash %}
 #!/bin/bash
 cd ..
 unset GIT_DIR
-```
+{% endhighlight %}
 
 Let us assume that we need to update dependencies through Composer. In our simple demo application we just have an index file. But in any real world application this will probably be the case. Then we could add this to the hook:
 
-```
+~~~
 echo "[*] Running Composer update"
 composer update --no-dev
-```
+~~~
 
 And there we have it! Every time you do a `git push production master`, the hooks will run and you don’t have to manually run them. The commands are arbitrary, and any commands you can run in the terminal on your server, you can run here.
 

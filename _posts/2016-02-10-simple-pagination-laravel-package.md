@@ -30,26 +30,26 @@ Most often you query a database for paginated results to display in your paginat
 
 Say you are one page four and want display 20 results, your offset will be `20 * (4 - 1) = 60`. The query looks like this:
 
-```sql
+{% highlight sql %}
 SELECT * FROM your_table LIMIT 60,20;
-```
+{% endhighlight %}
 
 You can have conditionals, joins and so on to your query also. Just apply the limit to it:
 
-```sql
+{% highlight sql %}
 SELECT yt.* FROM your_table yt
 JOIN some_table st ON st.join_column = yt.id
 WHERE yt.category = 'some_category'
 GROUP BY yt.id
 LIMIT 60,20;
-```
+{% endhighlight %}
 
 In cases where you want to display pages in your pagination, you need the total amount of items. You can do this in two ways. Either you fetch all results from the database, count how many and then use PHP to grab the results you want to display. Or you use the method of limiting the results in your query and execute another query for the count.
 
-```sql
+{% highlight sql %}
 SELECT * FROM your_table LIMIT 60,20;
 SELECT count(*) FROM your_table;
-```
+{% endhighlight %}
 
 Keep in mind the performance implications of both methods. Fetching all results and dealing with them in PHP might be a bad idea for performance if you have a large number of items. I suggest you stick with two database queries in these cases, one for the results and one for the count. For this you should make sure to optimize your queries with indexes.
 
@@ -66,13 +66,13 @@ The paginator is responsible for keeping track of the items and managing the pag
 
 Start by installing `illuminate/pagination` with Composer
 
-```
+~~~
 composer require illuminate/pagination
-```
+~~~
 
 When you have it installed it you can use it just like any other component. It does not depend on anything in the Laravel framework. Here’s a simple example of pagination with it:
 
-```php
+{% highlight php %}
 {% raw %}
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
@@ -122,7 +122,7 @@ $paginator = new Illuminate\Pagination\Paginator($items, 10, $currentPage);
     </body>
 </html>
 {% endraw %}
-```
+{% endhighlight %}
 
 This is all you need to create a pagination in PHP. It populates an array with “blog posts”, fetches or sets the current page, slices out the current items to display and creates a paginator. Then there is some markup that we also render the paginator in. This simple pagination looks like this:
 
@@ -147,9 +147,9 @@ Would you want to display pages you need another presenter, the `Illuminate\Pagi
 *   `$currentPage = null` — current page
 *   `$options = []` —options for path, fragments, etc
 
-```php
+{% highlight php %}
 $paginator = new Illuminate\Pagination\LengthAwarePaginator($currentItems, count($items), $perPage, $currentPage);
-```
+{% endhighlight %}
 
 This code change is all you need to do. It implements the same interface as the simple paginator. Now you have this output instead:
 
@@ -161,7 +161,7 @@ If you have hundreds or thousands of pages, you do not want to display them all.
 
 Perhaps you want to create your own presenter for custom markup or another CSS framework. This is a simple procedure and I will show this with [Semantic UI](http://semantic-ui.com/), like I did in my previous blog post. Extending the paginator with your own presenter is the best approach for your pagination in PHP. The markup for pagination in this CSS framework looks like this:
 
-```html
+{% highlight html %}
 <div class="ui pagination menu">
   <a class="active item">
     1
@@ -179,13 +179,13 @@ Perhaps you want to create your own presenter for custom markup or another CSS f
     12
   </a>
 </div>
-```
+{% endhighlight %}
 
 To render this markup you first create a `SemanticUIPresenter` class and copy all contents from `Illuminate\Pagination\BootstrapThreePresenter`. Keep the `BootstrapThreeNextPreviousButtonRendererTrait` and `UrlWindowPresenterTrait` since they render buttons for next and previous buttons, and truncating pages. You could create your own implementations of these as well, but they work fine with Semantic UI.
 
 Now it’s a matter of updating the markup in the class to match that in the example markup. Also add some use statements since you aren’t in the `Illuminate\Pagination` namespace anymore. After that the class will look like this (I have removed doc blocks to keep the output down a bit).
 
-```php
+{% highlight php %}
 <?php
 
 use Illuminate\Support\HtmlString;
@@ -260,19 +260,20 @@ class SemanticUIPresenter implements PresenterContract
         return $this->paginator->lastPage();
     }
 }
-```
+{% endhighlight %}
 
 Now you create a new instance of this and pass it to the paginator’s render method.
 
-```php
+{% highlight php %}
 $presenter = new SemanticUIPresenter($paginator);
 // [...]
 <?=$paginator->render($presenter)?>
-```
+{% endhighlight %}
 
 This is what the updated view looks like with Semantic UI included and the new presenter:
 
-```php
+{% highlight php %}
+{% raw %}
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -317,7 +318,8 @@ $presenter = new SemanticUIPresenter($paginator);
 
 </body>
 </html>
-```
+{% endraw %}
+{% endhighlight %}
 
 This is what you end up with (ignore the poor padding), a pagination in PHP customized to a CSS framework:
 
@@ -327,7 +329,7 @@ This is what you end up with (ignore the poor padding), a pagination in PHP cust
 
 You can change how the paginator constructs URLs for pages. The default is appending `?page=X` to the current URL. But you might want `/posts/?page=X` instead for your paginator. Or you might need to change the query string name. You can either do this when creating the paginator, or by using setters.
 
-```php
+{% highlight php %}
 <?php
 // Constructor for 'posts/?page=X'
 $paginator = new Illuminate\Pagination\LengthAwarePaginator(
@@ -352,7 +354,7 @@ $paginator = new Illuminate\Pagination\LengthAwarePaginator(
 
 // Setter for ?current_page=X
 $paginator->setPageName('current_page');
-```
+{% endhighlight %}
 
 If you want to customise the paginator for pretty URLs, such as `posts/page/2`. That is not an out of the box-solution and you should take a look at Laravel Paginator Pretty URLs if this is a solution you need.
 

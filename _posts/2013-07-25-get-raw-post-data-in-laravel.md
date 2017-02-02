@@ -9,10 +9,10 @@ I recently stumbled upon an interesting problem when trying to retrieve the raw 
 
 To start of with we take a look at how we get the raw POST data in PHP. It’s a fairly simple command:
 
-```php
+{% highlight php %}
 <?php
 $rawPostData = file_get_contents("php://input");
-```
+{% endhighlight %}
 
 The `php://input` is an [I/O stream](http://us.php.net/manual/en/wrappers.php.php) that you can read the raw POST data from. What is interesting though is that it can **only be read once**. And this is what caused me not being able to fetch it in this simple matter.
 
@@ -20,10 +20,10 @@ The `php://input` is an [I/O stream](http://us.php.net/manual/en/wrappers.php.ph
 
 If you are familiar with Laravel you probably know that a lot of its core is built upon Symfony components, and the [HTTP request handler](http://symfony.com/doc/2.0/components/http_foundation/introduction.html#request) is one of those components. If we dig in to the class `Symfony\Component\HttpFoundation\Request` we find this interesting line:
 
-```php
+{% highlight php %}
 <?php
 $this->content = file_get_contents('php://input');
-```
+{% endhighlight %}
 
 Now you remember what I said about the I/O stream, right? I will repeat that, **it can only be read once**. Since the Symfony component reads the I/O stream, it’s empty after that. This results in that you can not access straight in your application with the simple approach I wrote before.
 
@@ -31,13 +31,13 @@ Now you remember what I said about the I/O stream, right? I will repeat that, **
 
 Lucky for us, the request instance is accessible through the Request [facade](http://laravel.com/docs/facades) in Laravel. The request instance then have the raw POST data set as its content.
 
-```php
+{% highlight php %}
 <?php
 // First we fetch the Request instance
 $request = Request::instance();
 
 // Now we can get the content from it
 $content = $request->getContent();
-```
+{% endhighlight %}
 
 Now we have the raw POST data in `$content`, simple as that.

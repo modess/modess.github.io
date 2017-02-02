@@ -20,7 +20,7 @@ To install it, take a look at their [download page](https://ngrok.com/download).
 
 Once you have it installed, you can run the command `ngrok 80` in a terminal and you’ve started a reverse proxy to your machine. It will look something like this:
 
-```
+~~~
 ngrok
 
 Tunnel Status                 online
@@ -30,7 +30,7 @@ Forwarding                    https://78e2eb80.ngrok.com -> 127.0.0.1:80
 Web Interface                 127.0.0.1:4040
 # Conn                        0
 Avg Conn Time                 0.00ms
-```
+~~~
 
 In this example we want to forward request on port 80, this could of course be any port you need. Ngrok will create a random subdomain for you and you can visit `http://127.0.0.1:4040` for the web interface were you can analyze and replay requests.
 
@@ -64,7 +64,7 @@ tunnels:
 
 If we now run `ngrok start vagrant` we will see this output:
 
-```
+~~~
 ngrok
 
 Tunnel Status                 online
@@ -73,6 +73,6 @@ Forwarding                    http://modess-vagrant.ngrok.com -> 192.168.1.200:8
 Web Interface                 127.0.0.1:4040
 # Conn                        0
 Avg Conn Time                 0.00ms
-```
+~~~
 
 Which tells us we have a “permanent” subdomain on ngrok.com everytime we run it!
