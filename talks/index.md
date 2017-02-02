@@ -19,7 +19,7 @@ It should not be difficult, scary or time consuming to deploy your application. 
 
 ### Roll your own micro framework
 
-September 7, 2015 @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/) | [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
+September 7, 2015 @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/) &raquo; [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
 
 Are micro frameworks the future? When you choose a framework your often have to make compromises and you couple your code to the framework itself. Let's explore how we can create our own micro framework we can tailor for our application's needs and how it fits well in a service oriented architecture.
 
@@ -28,7 +28,7 @@ Are micro frameworks the future? When you choose a framework your often have to 
 
 ### Deploying PHP Applications
 
-November 14, 2014 @ [Symfony November Camp](http://www.symfony.se/november-camp/) | [feedback](https://joind.in/12540), [slides](http://www.slideshare.net/niklasmodess/deploying-php-applications-41590200)
+November 14, 2014 @ [Symfony November Camp](http://www.symfony.se/november-camp/) &raquo; [feedback](https://joind.in/12540), [slides](http://www.slideshare.net/niklasmodess/deploying-php-applications-41590200)
 
 > The world of PHP is very interesting right now and it has been catching up on best coding practices. It's time we bring our deploy processes up to par with this and start using best practices for it as well. So what are the goals for it and which steps can be taken to reach them? How can we make the process fit better into the more and more Agile world we live in?
 
@@ -41,7 +41,7 @@ This talk gives a theoretical overview for what to consider when setting up a de
 
 ### Laravel's IoC Container
 
-October 10, 2014 @ [Laravel Stockholm](http://www.meetup.com/Laravel-Stockholm/events/207408992/) | [slides](http://www.slideshare.net/niklasmodess/laravels-ioc-container)
+October 10, 2014 @ [Laravel Stockholm](http://www.meetup.com/Laravel-Stockholm/events/207408992/) &raquo; [slides](http://www.slideshare.net/niklasmodess/laravels-ioc-container)
 
 Dependency injection and inversion of control are terms often used when we want to decouple code and write testable code. We take a look at how Laravel's IoC container and how it works to apply this to our code. It also covers how it's used for Laravel's internal components and what kind of awesome features provided by the framework that are available to us, such as service providers and interface bindings.
 
