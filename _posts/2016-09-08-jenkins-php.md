@@ -66,7 +66,7 @@ If the installation says it encountered any errors, just start the service manua
 sudo service jenkins start
 ```
 
-Wait for a while to let it boot up, and then go to the URL of your server with port 8080\. I have a Vagrant machine with a host named _jenkins_ so I’m using [http://jenkins:8080](http://jenkins:8080). It will prompt you for the initial admin password it has generated for you. Retrieve it with
+Wait for a while to let it boot up, and then go to the URL of your server with port 8080. I have a Vagrant machine with a host named _jenkins_ so I’m using [http://jenkins:8080](http://jenkins:8080). It will prompt you for the initial admin password it has generated for you. Retrieve it with
 
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -206,7 +206,7 @@ We now need a job for our Jenkins & PHP project. This we’ll do by adding a boi
 ```
 curl -L https://raw.githubusercontent.com/modess/php-jenkins-template/master/config.xml | \
  java -jar jenkins-cli.jar -s http://localhost:8080 create-job php-template --username $JCLIUSER --password $JCLIPASS
- ```
+```
 
 Refresh the home location for Jenkins and you should see a disabled job named _php-template_. It contains all the configuration for running tools, parsing output and processing it to a format that Jenkins can display.
 
