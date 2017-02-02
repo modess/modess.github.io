@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:           "/:title/"
@@ -23,6 +23,7 @@ author:
   github:  https://github.com/modess
 
 paginate: 5
+excerpt_separator: <!-- more -->
 
 gems:
   - jekyll-redirect-from
