@@ -1,7 +1,7 @@
 <head>
   {% if site.github %}
   <script type="text/javascript">
-      var host = {{ site.enforce_ssl }};
+      var host = '{{ site.enforce_ssl }}';
       if ((host == window.location.host) && (window.location.protocol != "https:"))
           window.location.protocol = "https";
   </script>
