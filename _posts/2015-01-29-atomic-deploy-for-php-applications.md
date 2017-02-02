@@ -49,14 +49,14 @@ The proposed folder structure needs to reside inside a root directory somewhere.
 
 It could look something like this:
 
-~~~
+```
 root/
     application/
         composer.lock
         composer.json
         index.php
         sessions/
-~~~
+```
 
 ## Deploy process
 

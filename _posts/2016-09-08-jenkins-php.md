@@ -53,40 +53,40 @@ You need to add some configuration files and a build directory to your repositor
 
 We’ll add the Jenkins repository, install Jenkins and a few other dependencies.
 
-~~~
+```
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install -y jenkins ant git-core curl unzip
-~~~
+```
 
 If the installation says it encountered any errors, just start the service manually
 
-~~~
+```
 sudo service jenkins start
-~~~
+```
 
-Wait for a while to let it boot up, and then go to the URL of your server with port 8080. I have a Vagrant machine with a host named _jenkins_ so I’m using [http://jenkins:8080](http://jenkins:8080). It will prompt you for the initial admin password it has generated for you. Retrieve it with
+Wait for a while to let it boot up, and then go to the URL of your server with port 8080\. I have a Vagrant machine with a host named _jenkins_ so I’m using [http://jenkins:8080](http://jenkins:8080). It will prompt you for the initial admin password it has generated for you. Retrieve it with
 
-~~~
+```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-~~~
+```
 
 After that you may skip the getting started guide and view Jenkins in all its glory.
 
 Switch over to the user _jenkins_ that have been created. From now on we’ll run most commands as this user. This is to make sure that everything works for when we’re making builds later on since this is the user that Jenkins uses.
 
-~~~
+```
 sudo su jenkins
-~~~
+```
 
 Let’s also save the user and password for when we’re going to use the CLI tool.
 
-~~~
+```
 echo 'JCLIUSER=admin' >> ~/.bashrc
 echo 'JCLIPASS=<YOUR_PASSWORD>' >> ~/.bashrc
 source ~/.bashrc
-~~~
+```
 
 ### Security settings
 
@@ -100,14 +100,14 @@ Now we need to fix a security setting to be able to use the CLI tool. Go to Mana
 
 Let’s install the plugins we need for making Jenkins & PHP play nice together. And in order to do that we first need to download the CLI tool.
 
-~~~
+```
 wget http://localhost:8080/jnlpJars/jenkins-cli.jar
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin \
     checkstyle cloverphp crap4j dry htmlpublisher jdepend \
     plot pmd violations warnings xunit git greenballs \
     --username $JCLIUSER --password $JCLIPASS
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart --username $JCLIUSER --password $JCLIPASS
-~~~
+```
 
 This will also install the plugin to display green balls on passing builds instead of blue ones. Why they’re blue from the start is because of [Japanese culture where you say you have a blue light instead of green](https://jenkins.io/blog/2012/03/13/why-does-jenkins-have-blue-balls/) when driving in traffic, and the original author of Jenkins grew up there. Quite fascinating. :)
 
@@ -115,44 +115,44 @@ This will also install the plugin to display green balls on passing builds inste
 
 In order to achieve CI with _Jenkins & PHP_, we of course need PHP installed. Exit from the _jenkins_ user, install PHP7.0 and some extensions that are required. Which PHP version you choose to install is up to you and your application’s needs. I tend to use PHP7.0 when I can because of the performance improvements. To install PHP5.4, replace all instances of _php7.0_ with _php5_ in the following commands. Or to install PHP5.6, replace all instances of _php7.0_ with _php5.6_.
 
-~~~
+```
 exit
-~~~
+```
 
-~~~
+```
 sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install -y php7.0 php7.0-xdebug php7.0-xsl php7.0-dom \
     php7.0-zip php7.0-mbstring
-~~~
+```
 
 ### Installing Composer
 
 In my last post we used PEAR to install the tools we needed, but this time we’ll use Composer instead to install them at the global level. So first we install Composer. If this fails due to outdated checksums, go to [https://getcomposer.org/download/](https://getcomposer.org/download/) and get the correct commands from there.
 
-~~~
+```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 sudo chown -R $USER:$USER ~/.composer/
-~~~
+```
 
 ### Installing tools
 
 Now switch back to the _jenkins_ user and install all tools we need.
 
-~~~
+```
 sudo su jenkins
-~~~
+```
 
-~~~
+```
 composer global config minimum-stability dev
 composer global config prefer-stable true
 composer global require phpunit/phpunit squizlabs/php_codesniffer \
     phploc/phploc pdepend/pdepend phpmd/phpmd sebastian/phpcpd \
     mayflower/php-codebrowser theseer/phpdox:dev-master
-~~~
+```
 
 These are all the tools we need for running our tasks, however Jenkins will not be able to find them when running our builds. We need to add the composer directories to PATH. Go to _Manage Jenkins,_ then go to _Configure System._ Under _Global properties_, click the check box for _Environment variables_ and set the name to _PATH_ and the value to _$PATH:vendor/bin:/var/lib/jenkins/.config/composer/vendor/bin_, then save_._ This ensures that Jenkins tries to use the project’s local dependencies first, then fall back on your global packages.
 
@@ -203,10 +203,10 @@ Generates API documentation for your project.
 
 We now need a job for our Jenkins & PHP project. This we’ll do by adding a boilerplate job that we’ll use as a base for the job. Once we have everything set up you may remove it if you want to.
 
-~~~
+```
 curl -L https://raw.githubusercontent.com/modess/php-jenkins-template/master/config.xml | \
  java -jar jenkins-cli.jar -s http://localhost:8080 create-job php-template --username $JCLIUSER --password $JCLIPASS
-~~~
+ ```
 
 Refresh the home location for Jenkins and you should see a disabled job named _php-template_. It contains all the configuration for running tools, parsing output and processing it to a format that Jenkins can display.
 
