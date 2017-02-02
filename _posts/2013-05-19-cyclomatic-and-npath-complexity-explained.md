@@ -73,7 +73,7 @@ function foo($a, $b)
     if ($a > 10) {
         echo 1;
     } else {
-        echo 2;
+        echo 2;
     }
     if ($a > $b) {
         echo 3;
