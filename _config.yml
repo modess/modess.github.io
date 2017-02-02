@@ -13,6 +13,7 @@ description: >
   I write mostly on deployment, Laravel and PHP in general.
   Author of <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a> and I occasionally talk at meetups or conferences.
 url:         https://modess.io
+enforce_ssl: modess.io
 baseurl:     /
 
 author:
