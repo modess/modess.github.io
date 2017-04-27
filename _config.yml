@@ -20,7 +20,7 @@ author:
   name:   'Niklas Modess'
   email:   niklas@modess.io
   twitter: niklasmodess
-  github:  https://github.com/modess
+  github:  modess
 
 paginate: 5
 excerpt_separator: <!-- more -->
