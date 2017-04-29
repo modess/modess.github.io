@@ -128,11 +128,10 @@ sudo apt-get install -y php7.0 php7.0-xdebug php7.0-xsl php7.0-dom \
 
 ### Installing Composer
 
-In my last post we used PEAR to install the tools we needed, but this time we’ll use Composer instead to install them at the global level. So first we install Composer. If this fails due to outdated checksums, go to [https://getcomposer.org/download/](https://getcomposer.org/download/) and get the correct commands from there.
+In my last post we used PEAR to install the tools we needed, but this time we’ll use Composer instead to install them at the global level. So first we install Composer.
 
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 sudo chown -R $USER:$USER ~/.composer/
