@@ -9,9 +9,9 @@ permalink:           "/:title/"
 title:       'modess.io'
 tagline:     ''
 description: >
-  My name is Niklas Modess. I'm a PHP developer and consultant from Stockholm, Sweden.
-  I write mostly on deployment, Laravel and PHP in general.
-  Author of <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a> and I occasionally talk at meetups or conferences.
+  Hello! My name is Niklas Modess, a PHP developer from Stockholm, Sweden.
+  I write mostly on deployment, Laravel, PHP and I'm the author of
+  <a href="http://www.deployingphpapplications.com">Deploying PHP Applications</a>.
 url:         https://modess.io
 enforce_ssl: modess.io
 baseurl:     /
