@@ -44,27 +44,36 @@ pre code {
   white-space: pre;
 }
 
-.sidebar {
+.sidebar-about {
   font-family: 'Roboto Condensed', 'Linux Libertine', Helvetica, Arial, sans-serif;
 }
 .sidebar .fa {
   margin-right: 10px;
 }
 .sidebar-about h1 {
-  font-family: 'Roboto Condensed', 'Linux Libertine', Helvetica, Arial, sans-serif;
-  font-size: 3.75rem;
+  font-family: Roboto Condensed,Linux Libertine,Helvetica,Arial,sans-serif;
+  font-size: 2.75rem;
   letter-spacing: -5px;
+  float: right;
+  line-height: 1;
+  margin-bottom: 30px;
 }
 .sidebar-about img {
   border-radius: 50%;
   margin: 0;
+  float: left;
 }
 @media (max-width: 48em) {
   .sidebar p {
     text-align: center;
   }
+  .sidebar-about h1 {
+    float: none;
+    margin-top: 15px;
+  }
   .sidebar-about img {
     margin: 0 auto;
+    float: none;
   }
 }
 
