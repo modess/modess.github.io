@@ -45,7 +45,7 @@ October 10, 2014 @ [Laravel Stockholm](http://www.meetup.com/Laravel-Stockholm/e
 
 Dependency injection and inversion of control are terms often used when we want to decouple code and write testable code. We take a look at how Laravel's IoC container and how it works to apply this to our code. It also covers how it's used for Laravel's internal components and what kind of awesome features provided by the framework that are available to us, such as service providers and interface bindings.
 
-<img src="/public/images/talk-laravels-ioc-container.jpeg" width="50%" />
+<iframe src="https://player.vimeo.com/video/108762932" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ---
 
