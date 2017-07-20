@@ -1,0 +1,15 @@
+{
+  "name": "modess.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:modess/modess.github.io.git",
+  "author": "Niklas Modess>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2"
+  }
+}
