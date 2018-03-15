@@ -1,10 +1,18 @@
 ---
-layout: page
-title: Talks
-icon: bullhorn
+title: Public speaking
+menu: true
 ---
 
-Below you'll find a list of talks I have given at meetups and conferences. If you would like me to give a presentation at your meetup or conference, hit me up with an [e-mail](mailto:niklas@modess.io).
+
+Below you'll find a list of talks I have given at meetups and conferences. If you would like me to give a presentation at your meetup or conference, contact me!
+
+---
+
+### The interface is dead, long live the interface!
+ 
+March 7, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/247514671/) 
+ 
+A talk on the culture of over architecturing that I have experienced emerging among Laravel developers. The talks focus was on stop using interfaces where they are unnecessary and mostly do more harm than good, and then discussing when they should be used.
 
 ---
 

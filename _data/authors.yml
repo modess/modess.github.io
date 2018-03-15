@@ -1,0 +1,28 @@
+# The primary author of this blog.
+# Must be the same as `author` in `_config.yml`.
+# You can change `author1` to your shortname.
+author1:
+  # Replace <...> with your own (remove the < >)
+  name:              Niklas Modess
+  email:             niklas@modess.io
+
+  # Used at the bottom of each page and at the top of the `about` layout
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:             |
+    Hi! My name is _Niklas Modess_ and I'm a PHP developer from Stockholm, Sweden.
+    I write mostly on deployment, continuous integration, Laravel and PHP in general.
+    I'm the author of [Deploying PHP Applications](http://www.deployingphpapplications.com)
+    and organizer of [Laravel Stockholm](https://www.meetup.com/Laravel-Stockholm).
+
+  # This photo will be used in the about section.
+  picture:
+    path:            /public/profile.jpg
+
+  # Social media icons in sidebar.
+  # Comment/uncommet to show/hide. Rearrange to change the order in which they appear.
+  social:
+    twitter:         niklasmodess
+    github:          modess
+    email:           mailto:niklas@modess.io
+    stackoverflow:   772791/niklas-modess
+    linkedin:        niklas-m-787283157
