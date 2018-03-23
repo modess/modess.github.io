@@ -59,6 +59,12 @@ permalink:             pretty
 paginate:              5
 paginate_path:         /page-:num/
 
+# Globally enable comments
+defaults:
+  - scope:
+      type: posts
+    values:
+      comments: true
 
 # Customizaton
 # ========================================================================================
