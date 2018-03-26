@@ -1,5 +1,5 @@
 ---
-title: Public speaking
+title: Talks
 menu: true
 ---
 
