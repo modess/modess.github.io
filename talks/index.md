@@ -8,6 +8,14 @@ Below you'll find a list of talks I have given at meetups and conferences. If yo
 
 ---
 
+### Why and how to Jenkins with PHP
+ 
+October 4, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/254879661/) 
+ 
+Can you tell how healthy your code is by looking at it? Do you continuously make sure it's doing well and make improvements for its well being? If you're not doing Continuous Integration (CI), the answer to these questions are probably no. Jenkins is the number 1 free and open source continuous integration platform and we'll take a look at how it plays nicely with our PHP applications, for happier and healthier code.
+
+---
+
 ### The interface is dead, long live the interface!
  
 March 7, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/247514671/) 
