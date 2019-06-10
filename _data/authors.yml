@@ -9,7 +9,7 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Hi! My name is _Niklas Modess_ and I'm a PHP developer from Stockholm, Sweden.
+    Hi! My name is Niklas Modess and I'm a PHP developer currently working as lead backend developer at [Firstvet](https://firstvet.com).
     I write mostly on deployment, continuous integration, Laravel and PHP in general.
     I'm the author of [Deploying PHP Applications](http://www.deployingphpapplications.com)
     and organizer of [Laravel Stockholm](https://www.meetup.com/Laravel-Stockholm).

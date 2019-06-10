@@ -31,7 +31,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Hi! My name is _Niklas Modess_ and I'm a PHP developer from Stockholm, Sweden.
+  Hi! My name is Niklas Modess and I'm a PHP developer currently working as lead backend developer at [Firstvet](https://firstvet.com).
   I write mostly on deployment, continuous integration, Laravel and PHP in general.
   I'm the author of [Deploying PHP Applications](http://www.deployingphpapplications.com)
   and organizer of [Laravel Stockholm](https://www.meetup.com/Laravel-Stockholm).
@@ -84,7 +84,7 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
