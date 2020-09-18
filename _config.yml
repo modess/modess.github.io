@@ -31,7 +31,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Hi! My name is Niklas Modess and I'm a PHP/Laravel consultant.
+  My name is Niklas Modess and I'm a PHP/Laravel developer.
   I write mostly on Laravel, PHP in general, deployment, continuous integration and infrastucture.
   I'm the author of [Deploying PHP Applications](http://www.deployingphpapplications.com)
   and organizer of [Laravel Stockholm](https://www.meetup.com/Laravel-Stockholm).
@@ -50,7 +50,7 @@ author:
   twitter:             niklasmodess
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2018. All rights reserved.
+copyright:             © 2020. All rights reserved.
 
 # Format of the permalinks
 permalink:             pretty
