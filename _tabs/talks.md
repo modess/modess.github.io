@@ -1,6 +1,7 @@
 ---
 title: Talks
 menu: true
+order: 1
 ---
 
 
@@ -9,30 +10,30 @@ Below you'll find a list of talks I have given at meetups and conferences. If yo
 ---
 
 ### Why and how to Jenkins with PHP
- 
-October 4, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/254879661/) 
- 
+
+October 4, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/254879661/)
+
 Can you tell how healthy your code is by looking at it? Do you continuously make sure it's doing well and make improvements for its well being? If you're not doing Continuous Integration (CI), the answer to these questions are probably no. Jenkins is the number 1 free and open source continuous integration platform and we'll take a look at how it plays nicely with our PHP applications, for happier and healthier code.
 
 ---
 
 ### The interface is dead, long live the interface!
- 
-March 7, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/247514671/) 
- 
+
+March 7, 2018 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/247514671/)
+
 A talk on the culture of over architecturing that I have experienced emerging among Laravel developers. The talks focus was on stop using interfaces where they are unnecessary and mostly do more harm than good, and then discussing when they should be used.
 
 ---
 
-### Guest lectures at Chas Academy 
- 
-November 2-3, 2017 @ [Chas Academy](https://chasacademy.se/) 
- 
-Two lectures at Chas Academy, an education for future full stack web developers in Stockholm. One lecture was about _deploying PHP applications_, best practices and tools on how to achieve a great and lasting deployment process. The other lecture consisted of the basics of _unit testing with PHPUnit_, how to get started with unit testing and TDD in the world of PHP. 
+### Guest lectures at Chas Academy
+
+November 2-3, 2017 @ [Chas Academy](https://chasacademy.se/)
+
+Two lectures at Chas Academy, an education for future full stack web developers in Stockholm. One lecture was about _deploying PHP applications_, best practices and tools on how to achieve a great and lasting deployment process. The other lecture consisted of the basics of _unit testing with PHPUnit_, how to get started with unit testing and TDD in the world of PHP.
 
 ---
 
-### Deploying Symfony applications with Capifony  
+### Deploying Symfony applications with Capifony
 
 November 23, 2015 @ [Symfony NYC](http://www.meetup.com/Symfony-NYC/events/226057010/)
 
