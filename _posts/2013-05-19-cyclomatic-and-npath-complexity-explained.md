@@ -60,11 +60,15 @@ Not that hard, huh?
 
 ## NPath complexity
 
-Now this one is a bit trickier since the PHPMD [documentation](http://phpmd.org/rules/codesize.html#npathcomplexity) really suck. This is what is says about it:
+The [PHPMD documentation](http://phpmd.org/rules/codesize.html#npathcomplexity) on this used to be confusing, saying:
 
 > The NPath complexity of a method is the number of acyclic execution paths through that method.
 
-Wait, what? At least to me that made zero sense when I first read it. But as previously stated, it's just a lot of fancy talk for simple stuff. The simple explanation is that how many "paths" there are in the flow of your code in the function. Let's write ut a simple example function.
+Huh, what? That made no sense to me. Since initially writing this blog post, I finally contributed [a pull request](https://github.com/phpmd/phpmd/pull/954) to make more sense of it. As previously stated, it's fancy talk for simple stuff. The simple explanation is how many "paths" there are in the flow of your code. Or it could be described as the number of possible outcomes for a function/method. Hence my suggested update to the documentation, with the following example code included.
+
+> The NPath complexity of a method is the number of acyclic execution paths through that method, that is how many possible outcomes it has.
+
+Let's look at the simple example function.
 
 ```php
 <?php
