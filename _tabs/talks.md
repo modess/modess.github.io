@@ -1,6 +1,6 @@
 ---
 title: Talks
-menu: true
+icon: fas fa-bullhorn
 order: 1
 ---
 
