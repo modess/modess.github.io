@@ -3,63 +3,74 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
-baseurl: ''
-
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Europe/Stockholm
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: modess.io                          # the main title
+title: modess.io # the main title
+tagline: >-
+  My name is Niklas Modess and I'm a PHP developer, author of <a href="https://deployingphpapplications.com/" style="text-decoration:underline;font-weight:bold;" target="_blank">Deploying PHP Applications</a>, organizer of <a href="https://www.meetup.com/Laravel-Stockholm" style="text-decoration:underline;font-weight:bold;" target="_blank">Laravel Stockholm</a>.
 
-tagline: >
-  My name is Niklas Modess and I'm a PHP/Laravel developer.
-  I write mostly on Laravel, PHP in general, deployment, continuous integration and infrastucture.
-  I'm the author of <a href="https://deployingphpapplications.com/" target="_blank">Deploying PHP Applications</a>
-  and organizer of <a href="https://www.meetup.com/Laravel-Stockholm" target=_blank">Laravel Stockholm</a>.
+description: >- # used by seo meta and the atom feed
+  My name is Niklas Modess and I'm a PHP developer. I'm the author of <a href="https://deployingphpapplications.com/" target="_blank">Deploying PHP Applications</a> and organizer of <a href="https://www.meetup.com/Laravel-Stockholm" target="_blank">Laravel Stockholm</a>.
 
-description: >-                        # used by seo meta and the atom feed
-  Blog mostly on Laravel, PHP in general, deployment, continuous integration and infrastucture.
-
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://modess.io'
+# Fill in the protocol & hostname for your site.
+# E.g. 'https://username.github.io', note that it does not end with a '/'.
+url: "https://modess.io"
 
 github:
-  username: modess             # change to your github username
-
+  username: modess # change to your GitHub username
 twitter:
-  username: niklasmodess            # change to your twitter username
+  username:
 
 social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Niklas Modess
   email: niklas@modess.io
   links:
-    - https://github.com/modess       # change to your github homepage
-    - https://twitter.com/niklasmodess      # change to your twitter homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/modess # change to your GitHub homepage
+    - https://www.linkedin.com/in/niklas-modess
 
-google_site_verification:               # fill in to your verification string
+# Site Verification Settings
+webmaster_verifications:
+  google: # fill in your Google verification code
+  bing: # fill in your Bing verification code
+  alexa: # fill in your Alexa verification code
+  yandex: # fill in your Yandex verification code
+  baidu: # fill in your Baidu verification code
+  facebook: # fill in your Facebook verification code
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: UA-35384679-2                # fill in your Google Analytics ID
-  # Google Analytics pageviews report settings
-  pv:
-    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
-    cache_path:       # the local PV cache data, friendly to visitors from GFW region
+# Web Analytics Settings
+analytics:
+  google:
+    id: # fill in your Google Analytics ID
+  goatcounter:
+    id: # fill in your GoatCounter ID
+  umami:
+    id: # fill in your Umami ID
+    domain: # fill in your Umami domain
+  matomo:
+    id: # fill in your Matomo ID
+    domain: # fill in your Matomo domain
+  cloudflare:
+    id: # fill in your Cloudflare Web Analytics token
+  fathom:
+    id: # fill in your Fathom Site ID
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -69,62 +80,79 @@ google_analytics:
 #
 # Available options:
 #
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
+#     light — Use the light color scheme
+#     dark — Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode: # [light | dark]
 
-# The CDN endpoint for images.
+# The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
+# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /public/profile.jpg
+avatar: https://0.gravatar.com/avatar/6dfbe6b2d109480c7e0ea02e25915f48986e586ca01589691015fef3f99c5b7d?size=256
 
-# boolean type, the global switch for ToC in posts.
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+# It can be overridden by a customized `page.image` in front matter.
+social_preview_image: # string, local or CORS resources
+
+# boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
-  active: 'giscus'        # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+  # The provider options are as follows:
   disqus:
-    shortname: modess-io    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
+    repo: # <gh-username>/<repo>
+    issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: modess/modess.github.io              # <gh-username>/<repo>
-    repo_id: MDEwOlJlcG9zaXRvcnkxODc0OTM0Mg==
-    category: General
-    category_id: DIC_kwDOAR4Xns4CSyNH
-    mapping:           # optional, default to 'pathname'
-    input_position:    # optional, default to 'bottom'
-    lang:              # optional, default to the value of `site.lang`
+    repo: # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
+    input_position: # optional, default to 'bottom'
+    lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled:      # boolean, keep empty means false
+    enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env:          # [development|production]
+    env: # [development | production]
 
 pwa:
-  enabled: true   # the option for PWA feature
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
+
+# The base URL of your site
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
     # default_lang: console
     span:
@@ -140,12 +168,12 @@ collections:
 
 defaults:
   - scope:
-      path: ''          # An empty string here means all files in the project
+      path: "" # An empty string here means all files in the project
       type: posts
     values:
       layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
+      comments: true # Enable comments in posts.
+      toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
@@ -154,19 +182,11 @@ defaults:
     values:
       comments: false
   - scope:
-      path: ''
-      type: tabs             # see `site.collections`
+      path: ""
+      type: tabs # see `site.collections`
     values:
       layout: page
       permalink: /:title/
-  - scope:
-      path: assets/img/favicons
-    values:
-      swcache: true
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
 
 sass:
   style: compressed
@@ -181,15 +201,15 @@ compress_html:
     envs: [development]
 
 exclude:
-  - '*.gem'
-  - '*.gemspec'
+  - "*.gem"
+  - "*.gemspec"
+  - docs
   - tools
   - README.md
-  - CHANGELOG.md
   - LICENSE
-  - gulpfile.js
-  - node_modules
-  - package*.json
+  - purgecss.js
+  - rollup.config.js
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]

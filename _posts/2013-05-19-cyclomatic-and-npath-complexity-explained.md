@@ -3,15 +3,17 @@ layout: post
 title: NPath complexity and cyclomatic complexity explained
 description: NPath complexity and cyclomatic complexity sounds really scary, but they are fancy words for quite simple concepts, here is a simple explanation for them.
 permalink: /npath-complexity-cyclomatic-complexity-explained/
+categories: [complexity]
+tags: [phpmd]
 ---
 
-If you happen to be using [PHP Mess Detector](http://phpmd.org/) (which you should for any larger project) you have probably stumbled upon these two, but do you really know what they stand for? NPath complexity and cyclomatic complexity sounds really scary, but they are fancy words for quite simple concepts. So let's go through them and also find out why they're important for maintainable and testable code. Both of these concepts are used in static code analysis and are measurements of how complex a function is.
+If you happen to be using [PHP Mess Detector](https://phpmd.org/) (which you should for any larger project) you have probably stumbled upon these two, but do you really know what they stand for? NPath complexity and cyclomatic complexity sounds really scary, but they are fancy words for quite simple concepts. So let's go through them and also find out why they're important for maintainable and testable code. Both of these concepts are used in static code analysis and are measurements of how complex a function is.
 
 <!-- more -->
 
 ## Cyclomatic complexity
 
-This is a very straight forward concept, it's pretty well [documented](http://phpmd.org/rules/codesize.html#cyclomaticcomplexity) in PHPMD's documentation and what does is pretty much count some statements. The standard threshold for this complexity is 10 points, so if you have a function with higher complexion than that, you should try to reduce it.
+This is a very straight forward concept, it's pretty well [documented](https://phpmd.org/rules/codesize.html#cyclomaticcomplexity) in PHPMD's documentation and what does is pretty much count some statements. The standard threshold for this complexity is 10 points, so if you have a function with higher complexion than that, you should try to reduce it.
 
 It will begin by adding 1 point for the function declaration, after that it will add 1 point for every `if`, `while`, `for` and `case`. I'll just copy and paste the example code from PHPMD's documentation to illustrate this, of how this function ends up with a cyclomatic complexity of 12.
 
@@ -60,7 +62,7 @@ Not that hard, huh?
 
 ## NPath complexity
 
-The [PHPMD documentation](http://phpmd.org/rules/codesize.html#npathcomplexity) on this used to be confusing, saying:
+The [PHPMD documentation](https://phpmd.org/rules/codesize.html#npathcomplexity) on this used to be confusing, saying:
 
 > The NPath complexity of a method is the number of acyclic execution paths through that method.
 

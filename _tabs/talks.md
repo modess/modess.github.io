@@ -35,7 +35,7 @@ Two lectures at Chas Academy, an education for future full stack web developers 
 
 ### Deploying Symfony applications with Capifony
 
-November 23, 2015 @ [Symfony NYC](http://www.meetup.com/Symfony-NYC/events/226057010/)
+November 23, 2015 @ [Symfony NYC](https://www.meetup.com/Symfony-NYC/events/226057010/)
 
 It should not be difficult, scary or time consuming to deploy your application. The key is automation and covering the important steps in your deploy process. This talk will be on general aspects of deployment and show how we can create a good and automated deploy process for Symfony applications using Capifony.
 
@@ -44,29 +44,30 @@ It should not be difficult, scary or time consuming to deploy your application. 
 
 ### Roll your own micro framework
 
-September 7, 2015 @ [PHP Stockholm](http://www.meetup.com/php-stockholm/events/224760608/) &raquo; [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
+September 7, 2015 @ [PHP Stockholm](https://www.meetup.com/php-stockholm/events/224760608/) &raquo; [slides](https://speakerdeck.com/modess/roll-your-own-micro-framework), [code](https://github.com/modess/micro-frameworks-talk)
 
 Are micro frameworks the future? When you choose a framework your often have to make compromises and you couple your code to the framework itself. Let's explore how we can create our own micro framework we can tailor for our application's needs and how it fits well in a service oriented architecture.
 
-<blockquote class="twitter-tweet" width="50%" lang="en"><p lang="en" dir="ltr">. <a href="https://twitter.com/niklasmodess">@niklasmodess</a> is going all technical on us about building a micro service <a href="https://twitter.com/hashtag/phpse?src=hash">#phpse</a> <a href="https://twitter.com/hashtag/sthlmtech?src=hash">#sthlmtech</a> <a href="http://t.co/UArKzPJnyK">pic.twitter.com/UArKzPJnyK</a></p>&mdash; Tobias Nyholm (@TobiasNyholm) <a href="https://twitter.com/TobiasNyholm/status/640947023554945025">September 7, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" width="50%" lang="en"><p lang="en" dir="ltr">. <a href="https://twitter.com/niklasmodess">@niklasmodess</a> is going all technical on us about building a micro service <a href="https://twitter.com/hashtag/phpse?src=hash">#phpse</a> <a href="https://twitter.com/hashtag/sthlmtech?src=hash">#sthlmtech</a> <a href="https://t.co/UArKzPJnyK">pic.twitter.com/UArKzPJnyK</a></p>&mdash; Tobias Nyholm (@TobiasNyholm) <a href="https://twitter.com/TobiasNyholm/status/640947023554945025">September 7, 2015</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Deploying PHP Applications
 
-November 14, 2014 @ [Symfony November Camp](http://www.symfony.se/november-camp/) &raquo; [feedback](https://joind.in/12540), [slides](http://www.slideshare.net/niklasmodess/deploying-php-applications-41590200)
+November 14, 2014 @ [Symfony November Camp](https://www.symfony.se/november-camp/) &raquo; [feedback](https://joind.in/12540), [slides](https://www.slideshare.net/niklasmodess/deploying-php-applications-41590200)
 
 > The world of PHP is very interesting right now and it has been catching up on best coding practices. It's time we bring our deploy processes up to par with this and start using best practices for it as well. So what are the goals for it and which steps can be taken to reach them? How can we make the process fit better into the more and more Agile world we live in?
 
 This talk gives a theoretical overview for what to consider when setting up a deploy process for a PHP application. It covers areas such as agility, environments, automation, rollbacks, goals and maturity. I also wrote a [blog post](https://modess.io/so-i-spoke-at-a-conference/) on my experience giving this talk for the first time.
 
-<blockquote class="twitter-tweet" width="50%" lang="en"><p>The deployment progress by <a href="https://twitter.com/niklasmodess">@niklasmodess</a> <a href="https://twitter.com/hashtag/NovemberCamp?src=hash">#NovemberCamp</a> <a href="http://t.co/PEXpTlLdip">pic.twitter.com/PEXpTlLdip</a></p>&mdash; Symfony Sverige (@symfonyse) <a href="https://twitter.com/symfonyse/status/533213303074750464">November 14, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" width="50%" lang="en"><p>The deployment progress by <a href="https://twitter.com/niklasmodess">@niklasmodess</a> <a href="https://twitter.com/hashtag/NovemberCamp?src=hash">#NovemberCamp</a> <a href="https://t.co/PEXpTlLdip">pic.twitter.com/PEXpTlLdip</a></p>&mdash; Symfony Sverige (@symfonyse) <a href="https://twitter.com/symfonyse/status/533213303074750464">November 14, 2014</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
 
 ### Laravel's IoC Container
 
-October 10, 2014 @ [Laravel Stockholm](http://www.meetup.com/Laravel-Stockholm/events/207408992/) &raquo; [slides](http://www.slideshare.net/niklasmodess/laravels-ioc-container)
+October 10, 2014 @ [Laravel Stockholm](https://www.meetup.com/Laravel-Stockholm/events/207408992/) &raquo; [slides](https://www.slideshare.net/niklasmodess/laravels-ioc-container)
 
 Dependency injection and inversion of control are terms often used when we want to decouple code and write testable code. We take a look at how Laravel's IoC container and how it works to apply this to our code. It also covers how it's used for Laravel's internal components and what kind of awesome features provided by the framework that are available to us, such as service providers and interface bindings.
 
@@ -76,8 +77,8 @@ Dependency injection and inversion of control are terms often used when we want 
 
 ### Deploying AngularJS applications with git hooks
 
-March 25, 2014 @ [Stockholm AngularJS](http://www.meetup.com/Stockholm-AngularJS/events/165507582/)
+March 25, 2014 @ [Stockholm AngularJS](https://www.meetup.com/Stockholm-AngularJS/events/165507582/)
 
 When writing AngularJS applications we often rely on certain tools for building our application, such as concatenation or minification of files through Gulp or Grunt. Since we have these tools we could use them to automate deploys of our applications. This talk gives a brief explanation of what we want to achieve with our deploy process. Then it dives in to automating deploys with the use of git hooks and a live demo of a deploy to a remote server using `git push` only.
 
-<img src="/public/images/talk-angularjs-git-hooks.jpg" width="50%" />
+<img src="/assets/img/talk-angularjs-git-hooks.jpg" alt="Deploying AngularJS applications with git hooks" width="50%" />
