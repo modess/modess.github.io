@@ -13,7 +13,7 @@ If you happen to be using [PHP Mess Detector](https://phpmd.org/) (which you sho
 
 ## Cyclomatic complexity
 
-This is a very straight forward concept, it's pretty well [documented](https://phpmd.org/rules/codesize.html#cyclomaticcomplexity) in PHPMD's documentation and what does is pretty much count some statements. The standard threshold for this complexity is 10 points, so if you have a function with higher complexion than that, you should try to reduce it.
+This is a very straight forward concept, it's pretty well [documented](https://phpmd.org/rules/codesize.html#cyclomaticcomplexity) in PHPMD's documentation and what it does is pretty much count some statements. The standard threshold for this complexity is 10 points, so if you have a function with higher complexity than that, you should try to reduce it.
 
 It will begin by adding 1 point for the function declaration, after that it will add 1 point for every `if`, `while`, `for` and `case`. I'll just copy and paste the example code from PHPMD's documentation to illustrate this, of how this function ends up with a cyclomatic complexity of 12.
 
@@ -94,12 +94,12 @@ foo(11, 20); // Outputs 14
 foo(5, 1); // Outputs 23
 ```
 
-So here we have function with 4 possible outcomes, since we have 2 statements that have 2 possible outcomes each (`2 * 2 = 4`). That means that the functions Npath complexity is 4. If we would add another statement with 2 possible outcomes we would get a complexity of 8 since `2 * 2 * 2 = 8`.
+So here we have a function with 4 possible outcomes, since we have 2 statements that have 2 possible outcomes each (`2 * 2 = 4`). That means that the function's NPath complexity is 4. If we would add another statement with 2 possible outcomes we would get a complexity of 8 since `2 * 2 * 2 = 8`.
 
 So the NPath complexity is exponential and could easily get out of hand, in old legacy code don't be surprised if you find functions with complexity over 100 000. The default value of the threshold for this complexity is 200, staying under that value is something you should strive for.
 
 ## So why is the complexity important?
 
-Simple code is always better than complex code. This applies to areas as readability, maintainability and testability. Consider writing a unit test and you have a function with an NPath complexity of 16. This means that if you need want 100% code coverage you need to test for 16 possible outcomes and that would end up in pretty messy tests. This goes again the entire philosophy of unit testing since you want as much isolation as possible when writing your tests. That's why you should always try to reduce complexity in your application.
+Simple code is always better than complex code. This applies to areas as readability, maintainability and testability. Consider writing a unit test and you have a function with an NPath complexity of 16. This means that if you want 100% code coverage you need to test for 16 possible outcomes and that would end up in pretty messy tests. This goes against the entire philosophy of unit testing since you want as much isolation as possible when writing your tests. That's why you should always try to reduce complexity in your application.
 
 So don't be scared of these seemingly scary concepts but instead embrace them and use them to your advantage.
